@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+/* Custom showcase — three overlapping rotated PDF cards.
+   Kept in plain CSS because Tailwind can't cleanly express
+   absolutely-positioned cards with different transforms per
+   breakpoint. Scoped to .showcase. */
+.showcase {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  height: 480px;
+  overflow: hidden;
+}
+.showcase-card {
+  position: absolute;
+  top: 32px;
+  left: 50%;
+  width: 300px;
+  margin-left: -150px;
+  border-radius: 8px;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(255, 255, 255, 0.06);
+}
+.showcase-card img {
+  width: 100%;
+  border-radius: 8px;
+  display: block;
+}
+.showcase-card:nth-child(1) {
+  transform: rotate(-4deg) translateX(-140px);
+  z-index: 1;
+}
+.showcase-card:nth-child(2) {
+  transform: translateY(-8px);
+  z-index: 3;
+}
+.showcase-card:nth-child(3) {
+  transform: rotate(4deg) translateX(140px);
+  z-index: 2;
+}
+@media (max-width: 700px) {
+  .showcase {
+    height: 340px;
+  }
+  .showcase-card {
+    width: 200px;
+    margin-left: -100px;
+    top: 24px;
+  }
+  .showcase-card:nth-child(1) {
+    transform: rotate(-4deg) translateX(-90px);
+  }
+  .showcase-card:nth-child(3) {
+    transform: rotate(4deg) translateX(90px);
+  }
+}
+@media (max-width: 480px) {
+  .showcase {
+    height: 280px;
+  }
+  .showcase-card {
+    width: 160px;
+    margin-left: -80px;
+    top: 16px;
+  }
+  .showcase-card:nth-child(1) {
+    transform: rotate(-4deg) translateX(-70px);
+  }
+  .showcase-card:nth-child(3) {
+    transform: rotate(4deg) translateX(70px);
+  }
+}

@@ -1,0 +1,48 @@
+Deep Researcher License v1.0
+
+Copyright (c) 2026 Leon Beckert
+
+Permission is hereby granted to any person obtaining a copy of this software
+and associated documentation files (the "Software"), to use, copy, and modify
+the Software for personal and commercial purposes, subject to the following
+conditions:
+
+1. ATTRIBUTION REQUIREMENT
+
+   All documents, reports, and other outputs generated using this Software
+   must include the following attribution line in its original, unmodified form:
+
+   For German-language outputs:
+   "Erstellt mit Deep Researcher (https://deep-research.leon.fm) von Leon Beckert"
+
+   For English-language outputs:
+   "Generated with Deep Researcher (https://deep-research.leon.fm) by Leon Beckert"
+
+   This attribution must appear at the end of every generated document,
+   including all output formats (Markdown, PDF, DOCX). The attribution must
+   be clearly visible and not hidden, obscured, or rendered unreadable.
+
+2. NO REMOVAL
+
+   Removal, modification, obfuscation, or suppression of the attribution line
+   from generated outputs is expressly prohibited. This includes but is not
+   limited to:
+   - Deleting the attribution from generated files
+   - Modifying the agent instructions to suppress attribution
+   - Using automated tools or prompt engineering to circumvent attribution
+   - Covering, hiding, or making the attribution unreadable in derived formats
+
+3. REDISTRIBUTION
+
+   Redistribution of this Software, in whole or in part, with or without
+   modification, must include this LICENSE file in its entirety.
+
+4. NO WARRANTY
+
+   THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+   OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+   FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+   AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+   LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+   FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+   DEALINGS IN THE SOFTWARE.

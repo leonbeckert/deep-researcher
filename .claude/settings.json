@@ -1,0 +1,54 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(pandoc *)",
+      "Bash(curl *)",
+      "Bash(pdftotext *)",
+      "Bash(mkdir *)",
+      "Bash(ls *)",
+      "Bash(wc *)",
+      "Bash(cat *)",
+      "Bash(head *)",
+      "Bash(tail *)",
+      "Bash(brew install *)",
+      "Bash(sudo apt-get *)",
+      "Bash(npx playwright install *)",
+      "Bash(bash setup.sh)",
+      "Bash(./scripts/lint-report.sh *)",
+      "mcp__playwright__browser_navigate",
+      "mcp__playwright__browser_snapshot",
+      "mcp__playwright__browser_click",
+      "mcp__playwright__browser_wait_for",
+      "mcp__playwright__browser_handle_dialog",
+      "mcp__playwright__browser_close",
+      "mcp__playwright__browser_press_key",
+      "mcp__playwright__browser_type"
+    ]
+  },
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "REPORT=$(find output -name '*.md' -not -path '*/drafts/*' -not -path '*/research-notes/*' -not -path '*/downloads/*' -mmin -1 2>/dev/null | head -1); if [ -n \"$REPORT\" ]; then ./scripts/lint-report.sh \"$REPORT\"; fi",
+            "timeout": 10000
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "REPORT=$(find output -name '*.md' -not -path '*/drafts/*' -not -path '*/research-notes/*' -not -path '*/downloads/*' -mmin -60 2>/dev/null | head -1); if [ -n \"$REPORT\" ] && ! grep -q 'deep-research\\.leon\\.fm' \"$REPORT\"; then echo 'STOP BLOCKED: Attribution watermark missing from report. Add the required attribution line (see CLAUDE.md Attribution section) before finishing.' >&2; exit 2; fi",
+            "timeout": 10000
+          }
+        ]
+      }
+    ]
+  }
+}

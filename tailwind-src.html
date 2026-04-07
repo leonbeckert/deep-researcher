@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="de" class="h-full bg-zinc-950">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Deep Researcher — Recherche-Agent für Claude Code</title>
+  <meta name="description" content="KI-Recherche-Agent: Ein Prompt, fundierter Report mit echten Quellen und Inline-Zitaten. Automatischer PDF/DOCX-Export. Für Claude Code und OpenAI Codex.">
+  <meta property="og:title" content="Deep Researcher — Recherche-Agent für Claude Code">
+  <meta property="og:description" content="Ein Prompt, fundierter Report. Jede Behauptung mit Quelle belegt — als PDF, DOCX und Markdown.">
+  <meta property="og:image" content="https://raw.githubusercontent.com/leonbeckert/deep-researcher/main/screenshots/hero-peak-title.png">
+  <meta property="og:url" content="https://deep-research.leon.fm">
+  <meta property="og:type" content="website">
+  <style>/* Tailwind CSS will be inlined here in worker.js */</style>
+</head>
+<body class="min-h-full bg-zinc-950 text-zinc-100 antialiased [font-family:-apple-system,BlinkMacSystemFont,'Segoe_UI',system-ui,sans-serif]">
+
+  <!-- HERO -->
+  <section class="relative isolate px-6 pt-16 pb-6 sm:pt-24 sm:pb-10 lg:px-8">
+    <div class="mx-auto max-w-2xl text-center">
+      <h1 class="text-4xl font-semibold tracking-tight text-balance text-zinc-100 sm:text-6xl">Deep Researcher</h1>
+      <p class="mt-6 text-lg font-medium text-pretty text-zinc-400 sm:text-xl/8">Ein Prompt. Fundierter Report. Jede Behauptung mit Quelle belegt — als PDF, DOCX und Markdown.</p>
+      <div class="mt-10 flex flex-wrap items-center justify-center gap-4">
+        <a href="/download" class="rounded-md bg-blue-600 px-5 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-blue-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-500">ZIP herunterladen</a>
+        <a href="/github" class="rounded-md bg-zinc-900 px-5 py-3 text-sm font-semibold text-zinc-100 ring-1 ring-inset ring-zinc-800 transition hover:ring-zinc-700">GitHub</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SHOWCASE -->
+  <div class="showcase">
+    <div class="showcase-card">
+      <img src="https://raw.githubusercontent.com/leonbeckert/deep-researcher/main/screenshots/hero-euai-title.png" alt="EU AI Act Report — Titelseite" loading="lazy">
+    </div>
+    <div class="showcase-card">
+      <img src="https://raw.githubusercontent.com/leonbeckert/deep-researcher/main/screenshots/hero-peak-title.png" alt="Peak Performance Report — Titelseite mit Inhaltsverzeichnis" loading="lazy">
+    </div>
+    <div class="showcase-card">
+      <img src="https://raw.githubusercontent.com/leonbeckert/deep-researcher/main/screenshots/hero-peak-content.png" alt="Report-Seite mit Inline-Zitaten und Fußnoten" loading="lazy">
+    </div>
+  </div>
+
+  <!-- DEMO TERMINAL -->
+  <div class="mx-auto max-w-3xl px-6 py-8">
+    <div class="overflow-hidden rounded-xl border border-zinc-800 bg-zinc-900">
+      <div class="flex items-center gap-2 border-b border-zinc-800 px-4 py-3 text-xs text-zinc-500">
+        <span class="inline-block size-2.5 rounded-full bg-red-500"></span>
+        <span class="inline-block size-2.5 rounded-full bg-yellow-500"></span>
+        <span class="inline-block size-2.5 rounded-full bg-green-500"></span>
+        <span class="ml-2">Claude Code</span>
+      </div>
+      <div class="overflow-x-auto px-6 py-5 text-sm leading-relaxed [font-family:'SF_Mono','Fira_Code','Cascadia_Code',ui-monospace,monospace]">
+        <p class="whitespace-nowrap"><span class="text-blue-400">&gt;</span> Recherchiere EU AI Act Compliance für KMU</p>
+        <p class="mt-3 whitespace-nowrap text-zinc-600">Thema analysiert — 4 Threads identifiziert</p>
+        <p class="whitespace-nowrap"><span class="text-zinc-600">Sub-Agent 1/4:</span> Regulatorischer Rahmen <span class="text-green-400">14 Quellen</span></p>
+        <p class="whitespace-nowrap"><span class="text-zinc-600">Sub-Agent 2/4:</span> KMU-Pflichten <span class="text-green-400">11 Quellen</span></p>
+        <p class="whitespace-nowrap"><span class="text-zinc-600">Sub-Agent 3/4:</span> Compliance-Kosten <span class="text-green-400">9 Quellen</span></p>
+        <p class="whitespace-nowrap"><span class="text-zinc-600">Sub-Agent 4/4:</span> Praxisbeispiele <span class="text-green-400">8 Quellen</span></p>
+        <p class="mt-3 whitespace-nowrap"><span class="text-yellow-400">42 Quellen</span> gesammelt — Synthese…</p>
+        <p class="mt-3 whitespace-nowrap"><span class="text-green-400">Fertig:</span></p>
+        <p class="whitespace-nowrap">output/eu-ai-act-kmu/EU AI Act Was KMU jetzt wissen müssen — 2026-04-01.md <span class="text-zinc-600">(4.200 Wörter)</span></p>
+        <p class="whitespace-nowrap">output/eu-ai-act-kmu/EU AI Act Was KMU jetzt wissen müssen — 2026-04-01.pdf</p>
+        <p class="whitespace-nowrap">output/eu-ai-act-kmu/EU AI Act Was KMU jetzt wissen müssen — 2026-04-01.docx</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- EXAMPLES -->
+  <section class="mx-auto max-w-4xl px-6 py-16 sm:py-20">
+    <h2 class="text-center text-3xl font-semibold tracking-tight text-zinc-100 sm:text-4xl">Beispiel-Reports</h2>
+    <div class="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2">
+      <article class="rounded-xl border border-zinc-800 bg-zinc-900/50 p-6">
+        <div class="flex flex-wrap items-center gap-2">
+          <span class="inline-block rounded bg-blue-950 px-2.5 py-0.5 text-xs font-semibold uppercase tracking-wide text-blue-300">Deep</span>
+          <span class="inline-block rounded bg-green-950 px-2.5 py-0.5 text-xs font-semibold uppercase tracking-wide text-green-300">22 Quellen</span>
+        </div>
+        <h3 class="mt-4 text-base font-semibold text-zinc-100">EU AI Act: Was KMU jetzt wissen müssen</h3>
+        <p class="mt-2 text-sm text-zinc-400">Risikoklassen, Pflichten, Zeitplan und Umsetzungsstrategien für kleine und mittlere Unternehmen.</p>
+        <div class="mt-5 flex flex-wrap gap-2">
+          <a href="https://raw.githubusercontent.com/leonbeckert/deep-researcher/main/examples/eu-ai-act-kmu/EU%20AI%20Act%20Was%20KMU%20jetzt%20wissen%20m%C3%BCssen%20%E2%80%94%202026-04-01.pdf" class="inline-flex items-center gap-1.5 rounded-md bg-zinc-950 px-3 py-1.5 text-xs font-semibold text-zinc-400 ring-1 ring-inset ring-zinc-800 transition hover:text-zinc-100 hover:ring-zinc-700"><span class="font-mono uppercase tracking-wide">PDF</span><span>ansehen</span></a>
+          <a href="https://raw.githubusercontent.com/leonbeckert/deep-researcher/main/examples/eu-ai-act-kmu/EU%20AI%20Act%20Was%20KMU%20jetzt%20wissen%20m%C3%BCssen%20%E2%80%94%202026-04-01.md" class="inline-flex items-center gap-1.5 rounded-md bg-zinc-950 px-3 py-1.5 text-xs font-semibold text-zinc-400 ring-1 ring-inset ring-zinc-800 transition hover:text-zinc-100 hover:ring-zinc-700"><span class="font-mono uppercase tracking-wide">MD</span><span>Markdown</span></a>
+          <a href="https://raw.githubusercontent.com/leonbeckert/deep-researcher/main/examples/eu-ai-act-kmu/EU%20AI%20Act%20Was%20KMU%20jetzt%20wissen%20m%C3%BCssen%20%E2%80%94%202026-04-01.docx" class="inline-flex items-center gap-1.5 rounded-md bg-zinc-950 px-3 py-1.5 text-xs font-semibold text-zinc-400 ring-1 ring-inset ring-zinc-800 transition hover:text-zinc-100 hover:ring-zinc-700"><span class="font-mono uppercase tracking-wide">DOCX</span><span>Word</span></a>
+        </div>
+      </article>
+      <article class="rounded-xl border border-zinc-800 bg-zinc-900/50 p-6">
+        <div class="flex flex-wrap items-center gap-2">
+          <span class="inline-block rounded bg-blue-950 px-2.5 py-0.5 text-xs font-semibold uppercase tracking-wide text-blue-300">Deep</span>
+          <span class="inline-block rounded bg-green-950 px-2.5 py-0.5 text-xs font-semibold uppercase tracking-wide text-green-300">20 Quellen</span>
+        </div>
+        <h3 class="mt-4 text-base font-semibold text-zinc-100">Dateiorganisation für Kleinunternehmen</h3>
+        <p class="mt-2 text-sm text-zinc-400">Mensch- und KI-freundliche Ordnerstrukturen, GoBD-Compliance, Dateibenennung und DMS-Vergleich.</p>
+        <div class="mt-5 flex flex-wrap gap-2">
+          <a href="https://raw.githubusercontent.com/leonbeckert/deep-researcher/main/examples/dateiorganisation-kleinunternehmen/Dateiorganisation%20f%C3%BCr%20Kleinunternehmen%20Mensch-%20und%20KI-freundliche%20Strategien%20%E2%80%94%202026-04-01.pdf" class="inline-flex items-center gap-1.5 rounded-md bg-zinc-950 px-3 py-1.5 text-xs font-semibold text-zinc-400 ring-1 ring-inset ring-zinc-800 transition hover:text-zinc-100 hover:ring-zinc-700"><span class="font-mono uppercase tracking-wide">PDF</span><span>ansehen</span></a>
+          <a href="https://raw.githubusercontent.com/leonbeckert/deep-researcher/main/examples/dateiorganisation-kleinunternehmen/Dateiorganisation%20f%C3%BCr%20Kleinunternehmen%20Mensch-%20und%20KI-freundliche%20Strategien%20%E2%80%94%202026-04-01.md" class="inline-flex items-center gap-1.5 rounded-md bg-zinc-950 px-3 py-1.5 text-xs font-semibold text-zinc-400 ring-1 ring-inset ring-zinc-800 transition hover:text-zinc-100 hover:ring-zinc-700"><span class="font-mono uppercase tracking-wide">MD</span><span>Markdown</span></a>
+          <a href="https://raw.githubusercontent.com/leonbeckert/deep-researcher/main/examples/dateiorganisation-kleinunternehmen/Dateiorganisation%20f%C3%BCr%20Kleinunternehmen%20Mensch-%20und%20KI-freundliche%20Strategien%20%E2%80%94%202026-04-01.docx" class="inline-flex items-center gap-1.5 rounded-md bg-zinc-950 px-3 py-1.5 text-xs font-semibold text-zinc-400 ring-1 ring-inset ring-zinc-800 transition hover:text-zinc-100 hover:ring-zinc-700"><span class="font-mono uppercase tracking-wide">DOCX</span><span>Word</span></a>
+        </div>
+      </article>
+      <article class="rounded-xl border border-zinc-800 bg-zinc-900/50 p-6">
+        <div class="flex flex-wrap items-center gap-2">
+          <span class="inline-block rounded bg-blue-950 px-2.5 py-0.5 text-xs font-semibold uppercase tracking-wide text-blue-300">Deep</span>
+          <span class="inline-block rounded bg-green-950 px-2.5 py-0.5 text-xs font-semibold uppercase tracking-wide text-green-300">55 Quellen</span>
+        </div>
+        <h3 class="mt-4 text-base font-semibold text-zinc-100">Die Wissenschaft hinter kognitiver Höchstleistung</h3>
+        <p class="mt-2 text-sm text-zinc-400">Flow-Forschung, Schlaf, Ernährung, Bewegung und kognitive Strategien — evidenzbasierter Überblick über sechs Schlüsselfaktoren.</p>
+        <div class="mt-5 flex flex-wrap gap-2">
+          <a href="https://raw.githubusercontent.com/leonbeckert/deep-researcher/main/examples/peak-performance-wissenschaft/Die%20Wissenschaft%20hinter%20kognitiver%20H%C3%B6chstleistung%20%E2%80%94%202026-04-01.pdf" class="inline-flex items-center gap-1.5 rounded-md bg-zinc-950 px-3 py-1.5 text-xs font-semibold text-zinc-400 ring-1 ring-inset ring-zinc-800 transition hover:text-zinc-100 hover:ring-zinc-700"><span class="font-mono uppercase tracking-wide">PDF</span><span>ansehen</span></a>
+          <a href="https://raw.githubusercontent.com/leonbeckert/deep-researcher/main/examples/peak-performance-wissenschaft/Die%20Wissenschaft%20hinter%20kognitiver%20H%C3%B6chstleistung%20%E2%80%94%202026-04-01.md" class="inline-flex items-center gap-1.5 rounded-md bg-zinc-950 px-3 py-1.5 text-xs font-semibold text-zinc-400 ring-1 ring-inset ring-zinc-800 transition hover:text-zinc-100 hover:ring-zinc-700"><span class="font-mono uppercase tracking-wide">MD</span><span>Markdown</span></a>
+          <a href="https://raw.githubusercontent.com/leonbeckert/deep-researcher/main/examples/peak-performance-wissenschaft/Die%20Wissenschaft%20hinter%20kognitiver%20H%C3%B6chstleistung%20%E2%80%94%202026-04-01.docx" class="inline-flex items-center gap-1.5 rounded-md bg-zinc-950 px-3 py-1.5 text-xs font-semibold text-zinc-400 ring-1 ring-inset ring-zinc-800 transition hover:text-zinc-100 hover:ring-zinc-700"><span class="font-mono uppercase tracking-wide">DOCX</span><span>Word</span></a>
+        </div>
+      </article>
+      <article class="rounded-xl border border-zinc-800 bg-zinc-900/50 p-6">
+        <div class="flex flex-wrap items-center gap-2">
+          <span class="inline-block rounded bg-purple-950 px-2.5 py-0.5 text-xs font-semibold uppercase tracking-wide text-purple-300">Deeper</span>
+          <span class="inline-block rounded bg-green-950 px-2.5 py-0.5 text-xs font-semibold uppercase tracking-wide text-green-300">69 Quellen</span>
+        </div>
+        <h3 class="mt-4 text-base font-semibold text-zinc-100">Programmiersprachen für KI-gestützte Softwareentwicklung</h3>
+        <p class="mt-2 text-sm text-zinc-400">Go vs Rust vs TypeScript für KI-Agenten: Compiler-Feedback, Trainingskorpora, SWE-bench-Ergebnisse und SDK-Ökosysteme.</p>
+        <div class="mt-5 flex flex-wrap gap-2">
+          <a href="https://raw.githubusercontent.com/leonbeckert/deep-researcher/main/examples/ai-assisted-dev-languages/Programmiersprachen%20f%C3%BCr%20KI-gest%C3%BCtzte%20Softwareentwicklung%20%E2%80%94%202026-04-03.pdf" class="inline-flex items-center gap-1.5 rounded-md bg-zinc-950 px-3 py-1.5 text-xs font-semibold text-zinc-400 ring-1 ring-inset ring-zinc-800 transition hover:text-zinc-100 hover:ring-zinc-700"><span class="font-mono uppercase tracking-wide">PDF</span><span>ansehen</span></a>
+          <a href="https://raw.githubusercontent.com/leonbeckert/deep-researcher/main/examples/ai-assisted-dev-languages/Programmiersprachen%20f%C3%BCr%20KI-gest%C3%BCtzte%20Softwareentwicklung%20%E2%80%94%202026-04-03.md" class="inline-flex items-center gap-1.5 rounded-md bg-zinc-950 px-3 py-1.5 text-xs font-semibold text-zinc-400 ring-1 ring-inset ring-zinc-800 transition hover:text-zinc-100 hover:ring-zinc-700"><span class="font-mono uppercase tracking-wide">MD</span><span>Markdown</span></a>
+          <a href="https://raw.githubusercontent.com/leonbeckert/deep-researcher/main/examples/ai-assisted-dev-languages/Programmiersprachen%20f%C3%BCr%20KI-gest%C3%BCtzte%20Softwareentwicklung%20%E2%80%94%202026-04-03.docx" class="inline-flex items-center gap-1.5 rounded-md bg-zinc-950 px-3 py-1.5 text-xs font-semibold text-zinc-400 ring-1 ring-inset ring-zinc-800 transition hover:text-zinc-100 hover:ring-zinc-700"><span class="font-mono uppercase tracking-wide">DOCX</span><span>Word</span></a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- STEPS -->
+  <section class="mx-auto max-w-4xl px-6 py-16 sm:py-20">
+    <h2 class="text-center text-3xl font-semibold tracking-tight text-zinc-100 sm:text-4xl">In 3 Schritten starten</h2>
+    <div class="mt-12 grid grid-cols-1 gap-6 md:grid-cols-3">
+      <div class="rounded-xl border border-zinc-800 bg-zinc-900/50 p-6">
+        <div class="flex size-10 items-center justify-center rounded-lg bg-blue-600/10 text-lg font-semibold text-blue-400 ring-1 ring-inset ring-blue-500/30">1</div>
+        <h3 class="mt-4 text-base font-semibold text-zinc-100">Herunterladen und entpacken</h3>
+        <p class="mt-2 text-sm text-zinc-400">ZIP von GitHub laden — oder <code class="rounded border border-zinc-800 bg-zinc-950 px-1.5 py-0.5 font-mono text-xs text-zinc-300">git clone</code></p>
+      </div>
+      <div class="rounded-xl border border-zinc-800 bg-zinc-900/50 p-6">
+        <div class="flex size-10 items-center justify-center rounded-lg bg-blue-600/10 text-lg font-semibold text-blue-400 ring-1 ring-inset ring-blue-500/30">2</div>
+        <h3 class="mt-4 text-base font-semibold text-zinc-100">In Claude Desktop öffnen</h3>
+        <p class="mt-2 text-sm text-zinc-400">Code-Modus → Local → Ordner auswählen. Oder: <code class="rounded border border-zinc-800 bg-zinc-950 px-1.5 py-0.5 font-mono text-xs text-zinc-300">cd deep-researcher && claude</code></p>
+      </div>
+      <div class="rounded-xl border border-zinc-800 bg-zinc-900/50 p-6">
+        <div class="flex size-10 items-center justify-center rounded-lg bg-blue-600/10 text-lg font-semibold text-blue-400 ring-1 ring-inset ring-blue-500/30">3</div>
+        <h3 class="mt-4 text-base font-semibold text-zinc-100">Recherchieren</h3>
+        <p class="mt-2 text-sm text-zinc-400">«Recherchiere [dein Thema]» — der Agent liefert .md, .pdf und .docx</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="mx-auto max-w-4xl px-6 py-16 sm:py-20">
+    <h2 class="text-center text-3xl font-semibold tracking-tight text-zinc-100 sm:text-4xl">Features</h2>
+    <div class="mt-12 grid grid-cols-1 gap-4 sm:grid-cols-2">
+      <div class="rounded-xl border border-zinc-800 bg-zinc-900/50 p-5">
+        <h3 class="text-base font-semibold text-zinc-100">Inline-Zitate</h3>
+        <p class="mt-1.5 text-sm text-zinc-400">Jede Behauptung wird mit Quelle belegt. Keine halluzinierten Fakten.</p>
+      </div>
+      <div class="rounded-xl border border-zinc-800 bg-zinc-900/50 p-5">
+        <h3 class="text-base font-semibold text-zinc-100">Quellenbewertung</h3>
+        <p class="mt-1.5 text-sm text-zinc-400">Jede Quelle nach Typ klassifiziert — Journal Article, Meta-Analyse, Blog Post u.v.m.</p>
+      </div>
+      <div class="rounded-xl border border-zinc-800 bg-zinc-900/50 p-5">
+        <h3 class="text-base font-semibold text-zinc-100">Automatischer Export</h3>
+        <p class="mt-1.5 text-sm text-zinc-400">PDF via Typst, DOCX via Pandoc. Automatisch nach jeder Recherche.</p>
+      </div>
+      <div class="rounded-xl border border-zinc-800 bg-zinc-900/50 p-5">
+        <h3 class="text-base font-semibold text-zinc-100">3 Tiefenstufen</h3>
+        <p class="mt-1.5 text-sm text-zinc-400">Deep, Deeper, Deepest — von 10 bis 40+ Quellen.</p>
+      </div>
+      <div class="rounded-xl border border-zinc-800 bg-zinc-900/50 p-5">
+        <h3 class="text-base font-semibold text-zinc-100">Parallele Recherche</h3>
+        <p class="mt-1.5 text-sm text-zinc-400">Bis zu 8 Sub-Agents recherchieren gleichzeitig.</p>
+      </div>
+      <div class="rounded-xl border border-zinc-800 bg-zinc-900/50 p-5">
+        <h3 class="text-base font-semibold text-zinc-100">Claude + Codex</h3>
+        <p class="mt-1.5 text-sm text-zinc-400">Funktioniert mit Claude Desktop, Claude Code CLI und OpenAI Codex CLI.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- TIERS -->
+  <section class="mx-auto max-w-5xl px-6 py-16 sm:py-20">
+    <h2 class="text-center text-3xl font-semibold tracking-tight text-zinc-100 sm:text-4xl">Tiefenstufen</h2>
+    <div class="mt-12 grid grid-cols-1 gap-6 lg:grid-cols-3">
+      <div class="rounded-xl border border-zinc-800 bg-zinc-900/50 p-6">
+        <h3 class="text-lg font-semibold text-zinc-100">Deep</h3>
+        <dl class="mt-4 divide-y divide-zinc-800 text-sm">
+          <div class="flex justify-between gap-4 py-2"><dt class="text-zinc-400">Quellen</dt><dd class="text-right text-zinc-100">10 – 20</dd></div>
+          <div class="flex justify-between gap-4 py-2"><dt class="text-zinc-400">Sub-Agents</dt><dd class="text-right text-zinc-100">3 – 4</dd></div>
+          <div class="flex justify-between gap-4 py-2"><dt class="text-zinc-400">Durchläufe</dt><dd class="text-right text-zinc-100">1</dd></div>
+          <div class="flex justify-between gap-4 py-2"><dt class="text-zinc-400">Report</dt><dd class="text-right text-zinc-100">2.000 – 4.000 Wörter</dd></div>
+        </dl>
+      </div>
+      <div class="rounded-xl border border-zinc-800 bg-zinc-900/50 p-6">
+        <h3 class="text-lg font-semibold text-zinc-100">Deeper</h3>
+        <dl class="mt-4 divide-y divide-zinc-800 text-sm">
+          <div class="flex justify-between gap-4 py-2"><dt class="text-zinc-400">Quellen</dt><dd class="text-right text-zinc-100">20 – 40</dd></div>
+          <div class="flex justify-between gap-4 py-2"><dt class="text-zinc-400">Sub-Agents</dt><dd class="text-right text-zinc-100">5 – 6</dd></div>
+          <div class="flex justify-between gap-4 py-2"><dt class="text-zinc-400">Durchläufe</dt><dd class="text-right text-zinc-100">2 + Lückenanalyse</dd></div>
+          <div class="flex justify-between gap-4 py-2"><dt class="text-zinc-400">Report</dt><dd class="text-right text-zinc-100">5.000 – 10.000 Wörter</dd></div>
+        </dl>
+      </div>
+      <div class="rounded-xl border border-zinc-800 bg-zinc-900/50 p-6">
+        <h3 class="text-lg font-semibold text-zinc-100">Deepest</h3>
+        <dl class="mt-4 divide-y divide-zinc-800 text-sm">
+          <div class="flex justify-between gap-4 py-2"><dt class="text-zinc-400">Quellen</dt><dd class="text-right text-zinc-100">40+</dd></div>
+          <div class="flex justify-between gap-4 py-2"><dt class="text-zinc-400">Sub-Agents</dt><dd class="text-right text-zinc-100">7 – 8</dd></div>
+          <div class="flex justify-between gap-4 py-2"><dt class="text-zinc-400">Durchläufe</dt><dd class="text-right text-zinc-100">3 + Gegenrecherche</dd></div>
+          <div class="flex justify-between gap-4 py-2"><dt class="text-zinc-400">Report</dt><dd class="text-right text-zinc-100">10.000+ Wörter</dd></div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="mx-auto max-w-7xl overflow-hidden border-t border-zinc-900 px-6 py-12 sm:py-16">
+    <p class="text-center text-sm text-zinc-500">Erstellt von <a href="https://leon.fm" class="text-zinc-400 underline transition hover:text-zinc-100">Leon Beckert</a></p>
+  </footer>
+
+</body>
+</html>
