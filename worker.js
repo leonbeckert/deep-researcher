@@ -90,20 +90,6 @@ const HTML = `<!DOCTYPE html>
     <div class="mt-12 grid grid-cols-1 gap-6 md:grid-cols-2">
       <article class="rounded-xl border border-zinc-800 bg-zinc-900/50 p-6">
         <div class="flex flex-wrap items-center gap-2">
-          <span class="inline-block rounded bg-pink-950 px-2.5 py-0.5 text-xs font-semibold uppercase tracking-wide text-pink-300">Deepest</span>
-          <span class="inline-block rounded bg-green-950 px-2.5 py-0.5 text-xs font-semibold uppercase tracking-wide text-green-300">113 Quellen</span>
-        </div>
-        <h3 class="mt-4 text-base font-semibold text-zinc-100">AI-Based Research Tools \u2014 Facts vs. Hallucination</h3>
-        <p class="mt-2 text-sm text-zinc-400">13.000-W\u00f6rter-Deep-Dive: warum Halluzinationen strukturell sind, wie Benchmarks von Anbietern und unabh\u00e4ngigen Audits auseinanderdriften, und was 2026 noch verantwortbar ist \u2014 inkl. Gegenrecherche-Kapitel.</p>
-        <div class="mt-5 flex flex-wrap gap-2">
-          <a href="https://raw.githubusercontent.com/leonbeckert/deep-researcher/main/examples/ai-research-tools-facts-vs-hallucination/AI-Based%20Research%20Tools%20%E2%80%94%20Facts%20vs.%20Hallucination%20%E2%80%94%202026-04-03.pdf" class="inline-flex items-center gap-1.5 rounded-md bg-zinc-950 px-3 py-1.5 text-xs font-semibold text-zinc-400 ring-1 ring-inset ring-zinc-800 transition hover:text-zinc-100 hover:ring-zinc-700"><span class="font-mono uppercase tracking-wide">PDF</span><span>Light</span></a>
-          <a href="https://raw.githubusercontent.com/leonbeckert/deep-researcher/main/examples/ai-research-tools-facts-vs-hallucination/AI-Based%20Research%20Tools%20%E2%80%94%20Facts%20vs.%20Hallucination%20%E2%80%94%202026-04-03%20(Dark).pdf" class="inline-flex items-center gap-1.5 rounded-md bg-zinc-950 px-3 py-1.5 text-xs font-semibold text-zinc-400 ring-1 ring-inset ring-zinc-800 transition hover:text-zinc-100 hover:ring-zinc-700"><span class="font-mono uppercase tracking-wide">PDF</span><span>Dark</span></a>
-          <a href="https://raw.githubusercontent.com/leonbeckert/deep-researcher/main/examples/ai-research-tools-facts-vs-hallucination/AI-Based%20Research%20Tools%20%E2%80%94%20Facts%20vs.%20Hallucination%20%E2%80%94%202026-04-03.md" class="inline-flex items-center gap-1.5 rounded-md bg-zinc-950 px-3 py-1.5 text-xs font-semibold text-zinc-400 ring-1 ring-inset ring-zinc-800 transition hover:text-zinc-100 hover:ring-zinc-700"><span class="font-mono uppercase tracking-wide">MD</span><span>Markdown</span></a>
-          <a href="https://raw.githubusercontent.com/leonbeckert/deep-researcher/main/examples/ai-research-tools-facts-vs-hallucination/AI-Based%20Research%20Tools%20%E2%80%94%20Facts%20vs.%20Hallucination%20%E2%80%94%202026-04-03.docx" class="inline-flex items-center gap-1.5 rounded-md bg-zinc-950 px-3 py-1.5 text-xs font-semibold text-zinc-400 ring-1 ring-inset ring-zinc-800 transition hover:text-zinc-100 hover:ring-zinc-700"><span class="font-mono uppercase tracking-wide">DOCX</span><span>Word</span></a>
-        </div>
-      </article>
-      <article class="rounded-xl border border-zinc-800 bg-zinc-900/50 p-6">
-        <div class="flex flex-wrap items-center gap-2">
           <span class="inline-block rounded bg-blue-950 px-2.5 py-0.5 text-xs font-semibold uppercase tracking-wide text-blue-300">Deep</span>
           <span class="inline-block rounded bg-green-950 px-2.5 py-0.5 text-xs font-semibold uppercase tracking-wide text-green-300">20 Quellen</span>
         </div>
@@ -142,6 +128,20 @@ const HTML = `<!DOCTYPE html>
           <a href="https://raw.githubusercontent.com/leonbeckert/deep-researcher/main/examples/ai-assisted-dev-languages/Programmiersprachen%20f%C3%BCr%20KI-gest%C3%BCtzte%20Softwareentwicklung%20%E2%80%94%202026-04-03%20(Dark).pdf" class="inline-flex items-center gap-1.5 rounded-md bg-zinc-950 px-3 py-1.5 text-xs font-semibold text-zinc-400 ring-1 ring-inset ring-zinc-800 transition hover:text-zinc-100 hover:ring-zinc-700"><span class="font-mono uppercase tracking-wide">PDF</span><span>Dark</span></a>
           <a href="https://raw.githubusercontent.com/leonbeckert/deep-researcher/main/examples/ai-assisted-dev-languages/Programmiersprachen%20f%C3%BCr%20KI-gest%C3%BCtzte%20Softwareentwicklung%20%E2%80%94%202026-04-03.md" class="inline-flex items-center gap-1.5 rounded-md bg-zinc-950 px-3 py-1.5 text-xs font-semibold text-zinc-400 ring-1 ring-inset ring-zinc-800 transition hover:text-zinc-100 hover:ring-zinc-700"><span class="font-mono uppercase tracking-wide">MD</span><span>Markdown</span></a>
           <a href="https://raw.githubusercontent.com/leonbeckert/deep-researcher/main/examples/ai-assisted-dev-languages/Programmiersprachen%20f%C3%BCr%20KI-gest%C3%BCtzte%20Softwareentwicklung%20%E2%80%94%202026-04-03.docx" class="inline-flex items-center gap-1.5 rounded-md bg-zinc-950 px-3 py-1.5 text-xs font-semibold text-zinc-400 ring-1 ring-inset ring-zinc-800 transition hover:text-zinc-100 hover:ring-zinc-700"><span class="font-mono uppercase tracking-wide">DOCX</span><span>Word</span></a>
+        </div>
+      </article>
+      <article class="rounded-xl border border-zinc-800 bg-zinc-900/50 p-6">
+        <div class="flex flex-wrap items-center gap-2">
+          <span class="inline-block rounded bg-pink-950 px-2.5 py-0.5 text-xs font-semibold uppercase tracking-wide text-pink-300">Deepest</span>
+          <span class="inline-block rounded bg-green-950 px-2.5 py-0.5 text-xs font-semibold uppercase tracking-wide text-green-300">113 Quellen</span>
+        </div>
+        <h3 class="mt-4 text-base font-semibold text-zinc-100">AI-Based Research Tools \u2014 Facts vs. Hallucination</h3>
+        <p class="mt-2 text-sm text-zinc-400">13.000-W\u00f6rter-Deep-Dive: warum Halluzinationen strukturell sind, wie Benchmarks von Anbietern und unabh\u00e4ngigen Audits auseinanderdriften, und was 2026 noch verantwortbar ist \u2014 inkl. Gegenrecherche-Kapitel.</p>
+        <div class="mt-5 flex flex-wrap gap-2">
+          <a href="https://raw.githubusercontent.com/leonbeckert/deep-researcher/main/examples/ai-research-tools-facts-vs-hallucination/AI-Based%20Research%20Tools%20%E2%80%94%20Facts%20vs.%20Hallucination%20%E2%80%94%202026-04-03.pdf" class="inline-flex items-center gap-1.5 rounded-md bg-zinc-950 px-3 py-1.5 text-xs font-semibold text-zinc-400 ring-1 ring-inset ring-zinc-800 transition hover:text-zinc-100 hover:ring-zinc-700"><span class="font-mono uppercase tracking-wide">PDF</span><span>Light</span></a>
+          <a href="https://raw.githubusercontent.com/leonbeckert/deep-researcher/main/examples/ai-research-tools-facts-vs-hallucination/AI-Based%20Research%20Tools%20%E2%80%94%20Facts%20vs.%20Hallucination%20%E2%80%94%202026-04-03%20(Dark).pdf" class="inline-flex items-center gap-1.5 rounded-md bg-zinc-950 px-3 py-1.5 text-xs font-semibold text-zinc-400 ring-1 ring-inset ring-zinc-800 transition hover:text-zinc-100 hover:ring-zinc-700"><span class="font-mono uppercase tracking-wide">PDF</span><span>Dark</span></a>
+          <a href="https://raw.githubusercontent.com/leonbeckert/deep-researcher/main/examples/ai-research-tools-facts-vs-hallucination/AI-Based%20Research%20Tools%20%E2%80%94%20Facts%20vs.%20Hallucination%20%E2%80%94%202026-04-03.md" class="inline-flex items-center gap-1.5 rounded-md bg-zinc-950 px-3 py-1.5 text-xs font-semibold text-zinc-400 ring-1 ring-inset ring-zinc-800 transition hover:text-zinc-100 hover:ring-zinc-700"><span class="font-mono uppercase tracking-wide">MD</span><span>Markdown</span></a>
+          <a href="https://raw.githubusercontent.com/leonbeckert/deep-researcher/main/examples/ai-research-tools-facts-vs-hallucination/AI-Based%20Research%20Tools%20%E2%80%94%20Facts%20vs.%20Hallucination%20%E2%80%94%202026-04-03.docx" class="inline-flex items-center gap-1.5 rounded-md bg-zinc-950 px-3 py-1.5 text-xs font-semibold text-zinc-400 ring-1 ring-inset ring-zinc-800 transition hover:text-zinc-100 hover:ring-zinc-700"><span class="font-mono uppercase tracking-wide">DOCX</span><span>Word</span></a>
         </div>
       </article>
     </div>
