@@ -111,6 +111,16 @@ git push origin v1.2.0
 
 Jeder Push eines Tags im Format `v*` erstellt automatisch eine GitHub Release und lädt `deep-researcher.zip` als Asset hoch.
 
+Der Workflow liegt in `.github/workflows/release.yml` und ist auf `main` bereits aktiv.
+
+Wenn ein Push Änderungen unter `.github/workflows/` enthält, sollte das Remote per SSH konfiguriert sein:
+
+```bash
+git remote set-url origin git@github.com:leonbeckert/deep-researcher.git
+```
+
+Hintergrund: GitHub kann Pushes über das HTTPS OAuth-App-Setup für Workflow-Dateien ohne `workflow`-Scope ablehnen.
+
 Release mit `gh` CLI:
 
 ```bash
