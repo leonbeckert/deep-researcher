@@ -22,6 +22,8 @@ Download und entpacken:
 git clone https://github.com/leonbeckert/deep-researcher.git
 ```
 
+Der ZIP-Link funktioniert nur, wenn eine veröffentlichte GitHub Release ein Asset mit dem Namen `deep-researcher.zip` enthält.
+
 ### 2. Ordner öffnen
 
 **Claude Desktop:**
@@ -93,6 +95,37 @@ Dependencies (werden von `setup.sh` installiert):
 ## Lizenz
 
 [Deep Researcher License v1.0](LICENSE) — Nutzung frei, Attribution in generierten Reports ist Pflicht.
+
+## Release
+
+Um den stabilen Download-Link
+`https://github.com/leonbeckert/deep-researcher/releases/latest/download/deep-researcher.zip`
+aktuell zu halten, muss jede GitHub Release ein Asset mit genau diesem Namen enthalten.
+
+Automatisch per GitHub Actions:
+
+```bash
+git tag v1.2.0
+git push origin v1.2.0
+```
+
+Jeder Push eines Tags im Format `v*` erstellt automatisch eine GitHub Release und lädt `deep-researcher.zip` als Asset hoch.
+
+Release mit `gh` CLI:
+
+```bash
+git tag v1.2.0
+git push origin v1.2.0
+bash scripts/release.sh v1.2.0
+```
+
+Alternativ:
+
+```bash
+npm run release -- v1.2.0
+```
+
+Das Script ist der manuelle Fallback. Es baut `deep-researcher.zip` per `git archive`, erstellt die Release falls nötig und lädt das ZIP als Release-Asset hoch.
 
 ---
 

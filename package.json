@@ -3,7 +3,8 @@
   "private": true,
   "description": "Landing page for deep-research.leon.fm (Cloudflare Worker).",
   "scripts": {
-    "build:css": "bash build-css.sh"
+    "build:css": "bash build-css.sh",
+    "release": "bash scripts/release.sh"
   },
   "devDependencies": {
     "@tailwindcss/cli": "^4.2.2",
